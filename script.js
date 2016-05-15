@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
 
 	$routeProvider.otherwise({
 		redirectTo: '/error',
-		templateUrl: 'html/error.html',
+		templateUrl: 'partials/error.html',
 		controller: 'errorController'
 	});
 })
