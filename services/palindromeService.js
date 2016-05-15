@@ -2,14 +2,12 @@ var app = angular.module('angularApp');
 
 app.factory('palindromeService', function() {
 	
-	var input = "";
-	var reverseWord = "";
+	var input;
+	var reverseWord;
 
 	function getWord(userInput) {
-		input += userInput;
-		console.log(input);
-		reverseWord += input.split('').reverse().join('');
-		console.log(reverseWord);
+		input = userInput.toLowerCase();
+		reverseWord = input.split('').reverse().join('');
 	}
 
 	function isPalindrome() {
