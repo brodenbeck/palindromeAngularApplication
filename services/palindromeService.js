@@ -14,7 +14,7 @@ app.factory('palindromeService', function() {
 		if(input === reverseWord) {
 			return input + " is a palindrome."
 		} else {
-			return input + " is not a palindrome."
+			return input + " is NOT a palindrome."
 		}
 	}
 
