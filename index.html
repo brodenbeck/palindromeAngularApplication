@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='angularApp'>
+	<head>
+		<title>Palindrome Application</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="services/apiService.js"></script>
+		<script type="text/javascript" src="services/palindromeService.js"></script>
+		<script type="text/javascript" src="controllers/palindromeController.js"></script>
+		<script type="text/javascript" src="controllers/formController.js"></script>
+		<script type="text/javascript" src="controllers/errorController.js"></script>
+	</head>
+
+	<body>
+		<h1>Palindromes</h1>
+
+		<ng-view></ng-view>
+	</body>
+</html>
