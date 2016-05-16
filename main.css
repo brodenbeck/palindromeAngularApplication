@@ -1,6 +1,8 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	background-color: #2C363F;
+	color: #F2F5EA;
 }
 
 h1 {
@@ -19,16 +21,33 @@ input {
 	width: 50%;
 }
 
+input:focus {
+	outline: 1px solid #BBC7A4;
+}
+
 button {
 	font-family: 'Open Sans', sans-serif;
 	padding: 5px;
 	width: 23%;
+	background-color: #145C9E;
+	border: 1px solid #145C9E;
+	color: #F2F5EA;
+}
+
+button:focus {
+	outline: none;
 }
 
 a {
-	text-decoration: none;
+	color: #D6DBD2;
 }
 
 a:hover {
 	font-style: italic;
+}
+
+.return-link {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 }
