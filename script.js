@@ -1,19 +1,19 @@
-var app = angular.module('angularApp', ['ngRoute']);
+var app = angular.module('angularApp', ['ui.router']);
 
-app.config(function($routeProvider) {
-	$routeProvider.when('/', {
-		templateUrl: 'partials/form.html',
-		controller: 'formController'
-	});
+app.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/');
 
-	$routeProvider.when('/palindrome', {
-		templateUrl: 'partials/ngPalindrome.html',
-		controller: 'palindromeController'
-	});
+	$stateProvider
+		.state('home', {
+			url: '/',
+			templateUrl: 'partials/form.html',
+			controller: 'formController'
+		})
 
-	$routeProvider.otherwise({
-		redirectTo: '/error',
-		templateUrl: 'partials/error.html',
-		controller: 'errorController'
-	});
-})
+		.state('palindrome', {
+			url: '/palindrome',
+			templateUrl: 'partials/ngPalindrome.html',
+			controller: 'palindromeController'
+		})
+
+});
