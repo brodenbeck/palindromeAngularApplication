@@ -4,6 +4,7 @@ app.factory('palindromeService', function() {
 	
 	var input;
 	var reverseWord;
+	var words = [];
 
 	function getWord(userInput) {
 		input = userInput.toLowerCase();
@@ -12,9 +13,11 @@ app.factory('palindromeService', function() {
 
 	function isPalindrome() {
 		if(input === reverseWord) {
-			return input + " is a palindrome."
+			words.push(input + ' is a palindrome.')
+			return words;
 		} else {
-			return input + " is NOT a palindrome."
+			words.push(input + ' is NOT a palindrome.')
+			return words;
 		}
 	}
 
