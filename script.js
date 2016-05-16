@@ -16,4 +16,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			controller: 'palindromeController'
 		})
 
+		.state('api', {
+			url: '/api',
+			templateUrl: 'partials/api.html',
+			controller: 'apiController'
+		})
+
 });
