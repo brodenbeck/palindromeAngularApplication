@@ -1,7 +1,7 @@
 var app = angular.module('angularApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('error');
 
 	$stateProvider
 		.state('home', {
@@ -20,6 +20,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/api',
 			templateUrl: 'partials/api.html',
 			controller: 'apiController'
+		})
+
+		.state('error', {
+			url: '/error',
+			templateUrl: 'partials/error.html',
+			controller: 'errorController'
 		})
 
 });
